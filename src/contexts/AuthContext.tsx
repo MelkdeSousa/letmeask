@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 
 import { firebase, auth } from '../services/firebase';
 
@@ -17,7 +17,7 @@ type AuthProviderProps = {
   children: ReactNode
 }
 
-const AuthContext = createContext({} as AuthContextType)
+export const AuthContext = createContext({} as AuthContextType)
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<UserType>()
@@ -60,5 +60,3 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     </AuthContext.Provider>
   )
 }
-
-export const useAuth = () => useContext(AuthContext)
