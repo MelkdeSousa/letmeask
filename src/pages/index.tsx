@@ -37,6 +37,11 @@ const Home = () => {
       return
     }
 
+    if (roomRef.val().endedAt) {
+      alert('Sala encerrada.')
+      return
+    }
+
     router.push(`/rooms/${roomCode}`)
   }
 
