@@ -11,7 +11,6 @@ import googleIconImg from '../assets/google-icon.svg'
 import styles from '../styles/auth.module.scss'
 import { FormEvent, useState } from 'react'
 import { database } from '../services/firebase'
-import { route } from 'next/dist/next-server/server/router'
 
 const Home = () => {
   const [roomCode, setRoomCode] = useState('')
